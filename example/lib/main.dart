@@ -53,7 +53,6 @@ class AccordionPage extends StatelessWidget //__
           contentBackgroundColor: Colors.white,
           contentBorderColor: Colors.green,
           contentBorderWidth: 3,
-          contentHorizontalPadding: 20,
           scaleWhenAnimating: true,
           openAndCloseAnimation: true,
           headerPadding:
@@ -63,7 +62,6 @@ class AccordionPage extends StatelessWidget //__
           children: [
             AccordionSection(
               isOpen: true,
-              contentVerticalPadding: 20,
               leftIcon:
                   const Icon(Icons.text_fields_rounded, color: Colors.white),
               header: const Text('Simple Text', style: headerStyle),
@@ -73,8 +71,6 @@ class AccordionPage extends StatelessWidget //__
               isOpen: true,
               leftIcon: const Icon(Icons.input, color: Colors.white),
               header: const Text('Text Field & Button', style: headerStyle),
-              contentHorizontalPadding: 40,
-              contentVerticalPadding: 20,
               content: const MyInputForm(),
             ),
             AccordionSection(
@@ -107,7 +103,6 @@ class AccordionPage extends StatelessWidget //__
               contentBackgroundColor: Colors.amber,
               contentBorderColor: Colors.black54,
               contentBorderWidth: 1,
-              contentVerticalPadding: 30,
               header: const Text('Custom: Header with Border',
                   style: TextStyle(
                       color: Colors.black54,
@@ -138,7 +133,6 @@ class AccordionPage extends StatelessWidget //__
               headerBorderWidth: 1,
               contentBackgroundColor: Colors.brown,
               contentBorderWidth: 0,
-              contentVerticalPadding: 30,
               header: const Text('Custom: Other Colors', style: headerStyle),
               content: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -168,7 +162,6 @@ class AccordionPage extends StatelessWidget //__
               contentBackgroundColor: Colors.lightBlue,
               contentBorderColor: Colors.yellow,
               contentBorderWidth: 10,
-              contentVerticalPadding: 30,
               header: const Text('Custom: Heavy Borders', style: headerStyle),
               content: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -200,7 +193,6 @@ class AccordionPage extends StatelessWidget //__
               contentBorderColor: Colors.white,
               contentBorderWidth: 2,
               contentBorderRadius: 100,
-              contentVerticalPadding: 30,
               header: const Text('Custom: Very Round', style: headerStyle),
               content: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -232,7 +224,6 @@ class AccordionPage extends StatelessWidget //__
               contentBorderColor: const Color(0xffaaaaaa),
               contentBorderWidth: 1,
               contentBorderRadius: 0,
-              contentVerticalPadding: 30,
               header: const Text('Android', style: headerStyle),
               content: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -373,7 +364,6 @@ class MyNestedAccordion extends StatelessWidget //__
               const Text('Nested Section #1', style: AccordionPage.headerStyle),
           content: const Text(AccordionPage.loremIpsum,
               style: AccordionPage.contentStyle),
-          contentHorizontalPadding: 20,
           contentBorderColor: Colors.black54,
         ),
         AccordionSection(

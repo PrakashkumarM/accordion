@@ -70,8 +70,8 @@ class AccordionSection extends StatelessWidget with CommonParams {
     Color? contentBorderColor,
     double? contentBorderWidth,
     double? contentBorderRadius,
-    double? contentHorizontalPadding,
-    double? contentVerticalPadding,
+    EdgeInsets? contentPadding,
+    EdgeInsets? headerContentPadding,
     double? paddingBetweenOpenSections,
     double? paddingBetweenClosedSections,
     ScrollIntoViewOfItems? scrollIntoViewOfItems,
@@ -100,8 +100,8 @@ class AccordionSection extends StatelessWidget with CommonParams {
     this.contentBorderColor = contentBorderColor;
     this.contentBorderWidth = contentBorderWidth;
     this.contentBorderRadius = contentBorderRadius;
-    this.contentHorizontalPadding = contentHorizontalPadding;
-    this.contentVerticalPadding = contentVerticalPadding;
+    this.contentPadding = contentPadding;
+    this.headerContentPadding = headerContentPadding;
     this.paddingBetweenOpenSections = paddingBetweenOpenSections;
     this.paddingBetweenClosedSections = paddingBetweenClosedSections;
     this.scrollIntoViewOfItems =
@@ -256,8 +256,10 @@ class AccordionSection extends StatelessWidget with CommonParams {
                   Expanded(
                     flex: 10,
                     child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: leftIcon == null ? 0 : 15),
+                      padding: headerContentPadding
+                          ? headerContentPadding
+                          : EdgeInsets.symmetric(
+                              horizontal: leftIcon == null ? 0 : 15),
                       child: header,
                     ),
                   ),
@@ -312,10 +314,12 @@ class AccordionSection extends StatelessWidget with CommonParams {
                                   bottom: Radius.circular(
                                       contentBorderRadius / 1.02))),
                           child: Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: contentHorizontalPadding ?? 10,
-                              vertical: contentVerticalPadding ?? 10,
-                            ),
+                            padding: contentPadding
+                                ? contentPadding
+                                : EdgeInsets.symmetric(
+                                    horizontal: 10,
+                                    vertical: 10,
+                                  ),
                             child: Center(
                               child: content,
                             ),

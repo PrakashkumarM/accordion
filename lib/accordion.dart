@@ -70,8 +70,8 @@ class Accordion extends StatelessWidget with CommonParams {
     Color? contentBorderColor,
     double? contentBorderWidth,
     double? contentBorderRadius,
-    double? contentHorizontalPadding,
-    double? contentVerticalPadding,
+    EdgeInsets? contentPadding,
+    EdgeInsets? headerContentPadding
     this.paddingListTop = 20.0,
     this.paddingListBottom = 20.0,
     this.paddingListHorizontal = 10.0,
@@ -118,8 +118,8 @@ class Accordion extends StatelessWidget with CommonParams {
     this.contentBorderColor = contentBorderColor;
     this.contentBorderWidth = contentBorderWidth;
     this.contentBorderRadius = contentBorderRadius;
-    this.contentHorizontalPadding = contentHorizontalPadding;
-    this.contentVerticalPadding = contentVerticalPadding;
+    this.contentPadding = contentPadding;
+    this.headerContentPadding = headerContentPadding;
     this.headerPadding = headerPadding;
     this.paddingBetweenOpenSections = paddingBetweenOpenSections;
     this.paddingBetweenClosedSections = paddingBetweenClosedSections;
@@ -196,10 +196,8 @@ class Accordion extends StatelessWidget with CommonParams {
             contentBorderWidth: child.contentBorderWidth ?? contentBorderWidth,
             contentBorderRadius:
                 child.contentBorderRadius ?? contentBorderRadius,
-            contentHorizontalPadding:
-                child.contentHorizontalPadding ?? contentHorizontalPadding,
-            contentVerticalPadding:
-                child.contentVerticalPadding ?? contentVerticalPadding,
+            contentPadding: child.contentPadding ?? contentPadding,
+            headerContentPadding: child.headerContentPadding ?? headerContentPadding,
             sectionOpeningHapticFeedback: child.sectionOpeningHapticFeedback ??
                 sectionOpeningHapticFeedback,
             sectionClosingHapticFeedback: child.sectionClosingHapticFeedback ??

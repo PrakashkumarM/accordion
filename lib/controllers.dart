@@ -53,8 +53,7 @@ mixin CommonParams {
   late final Color? contentBorderColor;
   late final double? contentBorderWidth;
   late final double? contentBorderRadius;
-  late final double? contentHorizontalPadding;
-  late final double? contentVerticalPadding;
+  late final EdgeInsets? contentPadding;
   late final double? paddingBetweenOpenSections;
   late final double? paddingBetweenClosedSections;
   late final ScrollIntoViewOfItems? scrollIntoViewOfItems;
