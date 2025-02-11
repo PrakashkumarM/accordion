@@ -71,7 +71,7 @@ class Accordion extends StatelessWidget with CommonParams {
     double? contentBorderWidth,
     double? contentBorderRadius,
     EdgeInsets? contentPadding,
-    EdgeInsets? headerContentPadding
+    EdgeInsets? headerContentPadding,
     this.paddingListTop = 20.0,
     this.paddingListBottom = 20.0,
     this.paddingListHorizontal = 10.0,
@@ -197,7 +197,8 @@ class Accordion extends StatelessWidget with CommonParams {
             contentBorderRadius:
                 child.contentBorderRadius ?? contentBorderRadius,
             contentPadding: child.contentPadding ?? contentPadding,
-            headerContentPadding: child.headerContentPadding ?? headerContentPadding,
+            headerContentPadding:
+                child.headerContentPadding ?? headerContentPadding,
             sectionOpeningHapticFeedback: child.sectionOpeningHapticFeedback ??
                 sectionOpeningHapticFeedback,
             sectionClosingHapticFeedback: child.sectionClosingHapticFeedback ??
