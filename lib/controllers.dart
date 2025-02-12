@@ -54,6 +54,7 @@ mixin CommonParams {
   late final double? contentBorderWidth;
   late final double? contentBorderRadius;
   late final EdgeInsets? contentPadding;
+  late final EdgeInsets? headerContentPadding;
   late final double? paddingBetweenOpenSections;
   late final double? paddingBetweenClosedSections;
   late final ScrollIntoViewOfItems? scrollIntoViewOfItems;
